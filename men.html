@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<script>
+		var a=0;
+		
+		function bill (x) {
+			if((a+x)<0)
+			{
+				return
+			}
+			else if(x>0)
+			{
+		 	 a=a+x;
+		 	 document.getElementById("a2").value = a;
+		  	 alert("Added to cart!");
+		 	}
+		 	else
+		 	{
+		 		a=a+x;
+		 	 document.getElementById("a2").value = a;
+		  	 	alert("Removed from cart!");
+		 	}
+		}
+		</script>
+		<style>
+		
+		div
+		{
+			text-align:center;
+			font-size:medium;
+			color:#000000;
+			font-family:"Comic Sans MS";
+			text-transform: capitalize;
+			
+		}
+			img{
+			height:30%;
+			width:inherit;
+		}
+		</style>	
+		<script src="crousel.js"></script>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>Menu</title>
+		<meta name="description" content="">
+		<meta name="author" content="Ameya">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" type="text/css" href="all3d.css">
+	<script>
+    var init = function() {
+      var carousel = document.getElementById('carousel'),
+          navButtons = document.querySelectorAll('#navigation button'),
+          panelCount = carousel.children.length,
+          transformProp = Modernizr.prefixed('transform'),
+          theta = 0,
+
+          onNavButtonClick = function( event ){
+            var increment = parseInt( event.target.getAttribute('data-increment') );
+            theta += ( 360 / panelCount ) * increment * -1;
+            carousel.style[ transformProp ] = 'translateZ( -288px ) rotateY(' + theta + 'deg)';
+          };
+
+      for (var i=0; i < 2; i++) {
+        navButtons[i].addEventListener( 'click', onNavButtonClick, false);
+      }
+
+    };
+
+    window.addEventListener( 'DOMContentLoaded', init, false);
+  </script>
+	</head>
+
+	<body>
+		<nav>
+					<ul>
+				      <li><a href="AboutU.html">About Us</a></li>
+				      <li><a href="Home.php">Home</a></li>
+				      <li><a href="men.html">Menu</a></li>
+				      <li><a href="reg.html">Register</a></li>
+				   </ul>		
+			</nav>
+			<form name="myForm" action="pay.php" method="post" align="center">
+							 	<div style="font-size: 32px;font-family:Arial, Helvetica, sans-serif ;font-style: bold;color: red">BILL AMOUNT:
+							 	<input type="text" id="a2" name="a2" readonly="true">
+							 	<input type="submit" value="Submit">
+							 	</div>
+							 	</form>
+							 
+		<div>
+			
+			
+
+						<section class="container">
+								  <div id="carousel">
+								    <figure><img src="ches.jpg"/><button onclick="bill(200)">+</button><button onclick="bill(-200)">-</button><div><b><u>Cheese Pizza</u></b><br>Our delicious Three Cheese Pizza includes our savory sauce of vine-ripened tomatoes, garlic, and spices spread over Fresco's baked-to-perfection thin and crispy gluten free crust.</div></figure>
+								    <figure><img src="spec.jpg"/><button onclick="bill(200)">+</button><button onclick="bill(-200)">-</button><div><b><u>Country Special Pizza</u></b><br>For all those with a partiality for veggies, this one's loaded - crunchy onions, crisp capsicum and fresh juicy tomatoes. Yum!</figure>
+								    <figure><img src="chi.jpg"/><button onclick="bill(200)">+</button><button onclick="bill(-200)">-</button><div><b><u>Mushroom Chicken Pizza</u></b><br>Our original cheese is back! Melted cheese baked into the crust, finished with garlic and herb butter.Chicken breast, sliced button mushrooms and penne pasta in a rich, creamy sauce, topped with mozzarella cheese.</div></figure>
+								    <figure><img src="spi.jpg"/><button onclick="bill(200)">+</button><button onclick="bill(-200)">-</button><div><b><u>Spicy Chicken Pizza</u></b><br>Hot stuff! Handle with care. This one features hot and spicy chicken with red pepper that adds an extra punch.</div></figure>
+								    <figure><img src="bar.jpg"/><button onclick="bill(200)">+</button><button onclick="bill(-200)">-</button><div><b><u>Barbeque Chicken Pizza</u></b><br>A thrill from the grill - barbeque chicken with generous topping of cheese.</div></figure>
+								    <figure><img src="pep.jpg"/><button onclick="bill(200)">+</button><button onclick="bill(-200)">-</button><div><b><u>Pepperoni Pizza</u></b><br>Italian Bistro, Soft and Sweet Dough,Mozzarella cheese and pepperoni</div></figure>
+								    <figure><img src="tomato.jpg"/><button onclick="bill(200)">+</button><button onclick="bill(-200)">-</button><div><b><u>Special Tomato</u></b><br>A pizza that decidedly staggers under an overload of golden corn, exotic black olives, crunchy onions, crisp capsicum, succulent mushrooms, juicyfresh tomatoes and jalapeno - with extra cheese to go all around.</div></figure>
+								    <figure><img src="fool.jpg"/><button onclick="bill(200)">+</button><button onclick="bill(-200)">-</button><div><b><u>Farmhouse</u></b><br>A pizza that goes ballistic on veggies! Check out this mouth watering overload of crunchy, crisp capsicum, succulent mushrooms and fresh tomatoes</div></figure>
+								    <figure><img src="hawa.png"/><button onclick="bill(200)">+</button><button onclick="bill(-200)">-</button><div><b><u>Hawain Delight</u></b><br>A perfect holiday treat! Exotic, seasoned chicken salami with delicious pineapples and juicy jalapenos will leave your taste buds happy and tingly!</div></figure>
+								  </div>
+						</section>
+						<br><br><br><br><br><br><hr>
+						
+						<section id="options"><p id="navigation" style="width:200px ;margin-left: 600px">
+							<button id="previous" data-increment="-1">Previous</button>
+							 <button id="next" data-increment="1">Next</button>
+							 </p></section>
+			<footer>
+				<p>
+					&copy; Copyright  by Ameya
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>
